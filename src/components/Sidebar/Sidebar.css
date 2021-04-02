@@ -1,0 +1,116 @@
+:root {
+  /* --background: #15171c;
+  --background2: #414757;
+  --borderHover: #632ce4;
+  --borderHover2: #ac94e2;
+  --backgroundHover2: #252831;
+  --text: #e1e9fc; */
+
+  --background: #fdfffc;
+  --background2: #a8dadc;
+  --borderHover: #e63946;
+  --borderHover2: #e63946;
+  --backgroundHover2: #457b9d;
+  --text: #1d3557;
+}
+
+.nav {
+  background: var(--background);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+}
+.nav-icon {
+  color: var(--text);
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.1s;
+}
+.logo {
+  color: var(--text);
+  margin: 0 2rem;
+}
+.profile {
+  color: var(--text);
+  margin-right: 2rem;
+}
+.nav-icon:hover {
+  transform: scale(1.2);
+}
+.sidebar-link {
+  display: flex;
+  color: var(--text);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  list-style: none;
+  height: 60px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.sidebar-link.active,
+.sidebar-link:hover {
+  background: var(--background);
+  border-left: 4.5px solid var(--borderHover);
+  cursor: pointer;
+}
+span.sidebar-label {
+  margin-left: 10px;
+}
+.dropdown-link {
+  background: var(--background2);
+  height: 60px;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 16px;
+}
+.dropdown-link.active,
+.dropdown-link:hover {
+  background: var(--backgroundHover2);
+  border-left: 4px solid var(--borderHover2);
+  cursor: pointer;
+  color: var(--background);
+}
+nav.sidebar-nav {
+  background: var(--background);
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  padding-top: 60px;
+  left: -100%;
+  transition: 350ms;
+  z-index: 5;
+  overflow: auto;
+}
+nav.sidebar-nav.active {
+  left: 0;
+}
+.sidebar-wrap {
+  width: 80%;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}

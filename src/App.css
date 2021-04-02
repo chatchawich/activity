@@ -1,0 +1,11 @@
+.App {
+  /* background: black; */
+  min-height: calc(100vh - 60px);
+}
+
+.page-top {
+  margin-top: 60px;
+}
+.modal-card-title {
+  width: 95%;
+}
